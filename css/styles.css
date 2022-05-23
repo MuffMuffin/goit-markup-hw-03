@@ -1,0 +1,231 @@
+/* Palette */
+
+:root {
+  --webcolor: #2196f3;
+  --primarytext: #212121;
+  --secondarytext: #757575;
+  --accent: #2196f3;
+  --secondaryacc: #188ce8;
+  --footeraddress: rgba(255, 255, 255, 0.6);
+  --primarybg: #fff;
+  --secondarybg: #2f303a;
+  --whyaretheresomanycolorsaaaagggghh: #f5f4fa;
+  --studiomain: #000;
+  --studiosecond: #fff;
+  --trietaryacc: #fff;
+}
+
+/* Global Styles */
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  color: var(--primarytext);
+  background: var(--primarybg);
+}
+
+.header-front {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+}
+
+.list {
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Header Styles */
+
+.head {
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+
+.logo {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  text-decoration: none;
+}
+
+.logo.head {
+  color: var(--studiomain);
+}
+
+.logo-web {
+  color: var(--webcolor);
+}
+
+.head .link:hover,
+.head .link:focus {
+  color: var(--accent);
+}
+
+.current {
+  color: var(--accent);
+}
+
+.link.address {
+  color: var(--secondarytext);
+}
+
+/* Hero Styles */
+
+.hero {
+  background: var(--secondarybg);
+}
+
+.hero-heading {
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  letter-spacing: 0.06em;
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+}
+
+.hero-button {
+  font-family: inherit;
+  border: none;
+  background: var(--accent);
+  width: 200px;
+  height: 50px;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: white;
+  cursor: pointer;
+}
+
+.hero-button:hover,
+.hero-button:focus {
+  background: var(--secondaryacc);
+}
+
+/* Benefits Styles*/
+
+.benefits {
+}
+
+.bene-item {
+}
+
+.bene-item > h3 {
+  font-weight: 700;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+
+.bene-item > p {
+  line-height: 1.71;
+  color: var(--secondarytext);
+}
+
+/* Work Styles */
+
+.work {
+}
+
+/* Team Styles */
+
+.team {
+  background: var(--whyaretheresomanycolorsaaaagggghh);
+}
+
+.team-card {
+  background: var(--primarybg);
+}
+
+.team-card > h3 {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.18;
+  text-align: center;
+}
+
+.team-card > p {
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+  color: var(--secondarytext);
+}
+
+/* Footer Styles */
+
+.foot {
+  background: var(--secondarybg);
+}
+
+.logo.foot {
+  color: var(--studiosecond);
+}
+
+.foot-add {
+  font-style: inherit;
+}
+
+.footer-address {
+  line-height: 1.71;
+  color: var(--footeraddress);
+}
+
+.white {
+  color: var(--trietaryacc);
+}
+
+.foot .link:hover,
+.foot .link:focus {
+  color: var(--accent);
+}
+
+/* Portfolio Styles */
+
+.project-nav {
+}
+
+.button {
+  font-family: inherit;
+  border: none;
+  background: var(--whyaretheresomanycolorsaaaagggghh);
+  width: 128px;
+  height: 38px;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  text-align: center;
+  cursor: pointer;
+}
+
+.button:hover,
+.button:focus,
+.button.selected {
+  background: var(--accent);
+  color: var(--studiosecond);
+}
+
+.project-head {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
+
+.project-desc {
+  font-size: 16px;
+  line-height: 1.88;
+  color: var(--secondarytext);
+}
