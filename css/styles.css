@@ -1,4 +1,4 @@
-/* Palette */
+/* ----------- Palette ----------- */
 
 :root {
   --webcolor: #2196f3;
@@ -7,21 +7,25 @@
   --accent: #2196f3;
   --secondaryacc: #188ce8;
   --footeraddress: rgba(255, 255, 255, 0.6);
+  --outside: #e5e5e5;
   --primarybg: #fff;
   --secondarybg: #2f303a;
   --whyaretheresomanycolorsaaaagggghh: #f5f4fa;
   --studiomain: #000;
   --studiosecond: #fff;
   --trietaryacc: #fff;
+  --typical-padding: 94px;
+  --typical-margin: 50px;
 }
 
-/* Global Styles */
+/* ----------- Global Styles ----------- */
+
 body {
   font-family: "Roboto", sans-serif;
   font-size: 14px;
   letter-spacing: 0.03em;
   color: var(--primarytext);
-  background: var(--primarybg);
+  background: var(--outside);
 }
 
 .header-front {
@@ -40,12 +44,32 @@ body {
   color: inherit;
 }
 
-/* Header Styles */
+.container {
+  background: var(--primarybg);
+  width: 1600px;
+  margin: 0 auto;
+  padding-left: 215px;
+  padding-right: 215px;
+}
+
+/* ----------- Header Styles ----------- */
 
 .head {
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
+}
+
+.head-container {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ececec;
+}
+
+.head-nav {
+  display: flex;
 }
 
 .logo {
@@ -59,10 +83,20 @@ body {
 
 .logo.head {
   color: var(--studiomain);
+  margin-right: 93px;
 }
 
 .logo-web {
   color: var(--webcolor);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links > li:not(:last-child) {
+  margin-right: 50px;
 }
 
 .head .link:hover,
@@ -74,14 +108,27 @@ body {
   color: var(--accent);
 }
 
+.nav-contacts {
+  display: flex;
+  margin-left: auto;
+}
+
+.nav-contacts > li:first-child {
+  margin-right: 50px;
+}
+
 .link.address {
   color: var(--secondarytext);
 }
 
-/* Hero Styles */
+/* ----------- Hero Styles ----------- */
 
 .hero {
+}
+
+.hero-content {
   background: var(--secondarybg);
+  padding: 200px 237px 200px 237px;
 }
 
 .hero-heading {
@@ -92,14 +139,17 @@ body {
   text-align: center;
   text-transform: uppercase;
   color: white;
+  width: 696px;
+  margin: 0 auto;
+  margin-bottom: 30px;
 }
 
 .hero-button {
   font-family: inherit;
   border: none;
   background: var(--accent);
-  width: 200px;
-  height: 50px;
+  min-width: 200px;
+  min-height: 50px;
   border-radius: 4px;
   font-weight: 700;
   font-size: 16px;
@@ -108,6 +158,8 @@ body {
   letter-spacing: 0.06em;
   color: white;
   cursor: pointer;
+  display: block;
+  margin: 0 auto;
 }
 
 .hero-button:hover,
@@ -115,58 +167,127 @@ body {
   background: var(--secondaryacc);
 }
 
-/* Benefits Styles*/
+/* ----------- Benefits Styles ----------- */
 
 .benefits {
 }
 
-.bene-item {
+.bene-content {
+  padding-top: var(--typical-padding);
+  padding-bottom: var(--typical-padding);
 }
 
-.bene-item > h3 {
+.bene-grid {
+  display: flex;
+  justify-content: center;
+  margin-left: -30px;
+}
+
+.bene-item {
+  flex-basis: calc(100% / 4 - 30px);
+  margin-left: 30px;
+}
+
+.bitem-header {
   font-weight: 700;
   line-height: 1.14;
   text-transform: uppercase;
+  width: 270px;
+  margin-bottom: 10px;
 }
 
-.bene-item > p {
+.bitem-text {
   line-height: 1.71;
   color: var(--secondarytext);
+  width: 270px;
 }
 
-/* Work Styles */
+/* ----------- Work Styles ----------- */
 
 .work {
 }
 
-/* Team Styles */
+.work-content {
+  padding-bottom: var(--typical-padding);
+}
+
+.work-header {
+  margin-bottom: var(--typical-margin);
+}
+
+.work-grid {
+  display: flex;
+  justify-content: center;
+  margin-left: -30px;
+}
+
+.work-grid > li {
+  flex-basis: calc(100% / 3 - 30px);
+  margin-left: 30px;
+}
+
+/* ----------- Team Styles ----------- */
 
 .team {
+}
+
+.team-content {
   background: var(--whyaretheresomanycolorsaaaagggghh);
+  padding-top: var(--typical-padding);
+  padding-bottom: var(--typical-padding);
+}
+
+.team-header {
+  margin-bottom: var(--typical-margin);
+}
+
+.team-grid {
+  display: flex;
+  justify-content: center;
+  margin-left: -30px;
 }
 
 .team-card {
   background: var(--primarybg);
+  flex-basis: calc(100% / 4 - 30px);
+  margin-left: 30px;
+  padding-bottom: 30px;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0px 2px 2px #acacac;
 }
 
-.team-card > h3 {
+.team-img {
+  margin-bottom: 30px;
+}
+
+.team-name {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.18;
   text-align: center;
+  margin-bottom: 10px;
 }
 
-.team-card > p {
+.team-pos {
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
   color: var(--secondarytext);
 }
 
-/* Footer Styles */
+/* ----------- Footer Styles ----------- */
 
 .foot {
+}
+
+.foot-content {
   background: var(--secondarybg);
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.foot-logo {
+  margin-bottom: 20px;
 }
 
 .logo.foot {
@@ -191,23 +312,40 @@ body {
   color: var(--accent);
 }
 
-/* Portfolio Styles */
+.foot-add > ul > li:not(:last-child) {
+  margin-bottom: 9px;
+}
 
-.project-nav {
+/* ----------- Portfolio Styles ----------- */
+
+.portfolio-content {
+  padding-top: 174px;
+  padding-bottom: 94px;
+}
+
+.button-list {
+  width: 611px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  display: flex;
 }
 
 .button {
   font-family: inherit;
   border: none;
   background: var(--whyaretheresomanycolorsaaaagggghh);
-  width: 128px;
-  height: 38px;
+  padding: 6px 22px;
   border-radius: 4px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
   text-align: center;
   cursor: pointer;
+  display: block;
+}
+
+.button-list > li:not(:last-child) {
+  margin-right: 8px;
 }
 
 .button:hover,
@@ -215,6 +353,32 @@ body {
 .button.selected {
   background: var(--accent);
   color: var(--studiosecond);
+  box-shadow: 0px 3px 3px #acacac;
+}
+
+.project-grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -30px;
+  margin-bottom: -30px;
+}
+
+.project-card {
+  flex-basis: calc(100% / 3 - 30px);
+  margin-left: 30px;
+  margin-bottom: 30px;
+}
+
+.project-img {
+}
+
+.project-text {
+  margin-top: -4px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
 }
 
 .project-head {
@@ -222,10 +386,15 @@ body {
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
+  width: 332px;
+  margin: 0 auto;
+  margin-bottom: 4px;
 }
 
 .project-desc {
   font-size: 16px;
   line-height: 1.88;
   color: var(--secondarytext);
+  width: 332px;
+  margin: 0 auto;
 }
