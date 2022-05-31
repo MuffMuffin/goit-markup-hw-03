@@ -7,10 +7,10 @@
   --accent: #2196f3;
   --secondaryacc: #188ce8;
   --footeraddress: rgba(255, 255, 255, 0.6);
-  --outside: #e5e5e5;
+  /* --outside: #e5e5e5; */
   --primarybg: #fff;
   --secondarybg: #2f303a;
-  --whyaretheresomanycolorsaaaagggghh: #f5f4fa;
+  --morebackground: #f5f4fa;
   --studiomain: #000;
   --studiosecond: #fff;
   --trietaryacc: #fff;
@@ -25,7 +25,6 @@ body {
   font-size: 14px;
   letter-spacing: 0.03em;
   color: var(--primarytext);
-  background: var(--outside);
 }
 
 .header-front {
@@ -45,11 +44,15 @@ body {
 }
 
 .container {
-  background: var(--primarybg);
-  width: 1600px;
+  width: 1200px;
   margin: 0 auto;
-  padding-left: 215px;
-  padding-right: 215px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 
 /* ----------- Header Styles ----------- */
@@ -58,14 +61,14 @@ body {
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #ececec;
 }
 
 .head-container {
-  padding-top: 24px;
-  padding-bottom: 24px;
   display: flex;
   align-items: center;
-  border-bottom: 1px solid #ececec;
 }
 
 .head-nav {
@@ -81,7 +84,7 @@ body {
   text-decoration: none;
 }
 
-.logo.head {
+.logo.black {
   color: var(--studiomain);
   margin-right: 93px;
 }
@@ -124,11 +127,9 @@ body {
 /* ----------- Hero Styles ----------- */
 
 .hero {
-}
-
-.hero-content {
   background: var(--secondarybg);
-  padding: 200px 237px 200px 237px;
+  padding-top: 200px;
+  padding-bottom: 200px;
 }
 
 .hero-heading {
@@ -160,6 +161,7 @@ body {
   cursor: pointer;
   display: block;
   margin: 0 auto;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 .hero-button:hover,
@@ -170,11 +172,6 @@ body {
 /* ----------- Benefits Styles ----------- */
 
 .benefits {
-}
-
-.bene-content {
-  padding-top: var(--typical-padding);
-  padding-bottom: var(--typical-padding);
 }
 
 .bene-grid {
@@ -189,6 +186,7 @@ body {
 }
 
 .bitem-header {
+  font-size: 14px;
   font-weight: 700;
   line-height: 1.14;
   text-transform: uppercase;
@@ -229,12 +227,7 @@ body {
 /* ----------- Team Styles ----------- */
 
 .team {
-}
-
-.team-content {
-  background: var(--whyaretheresomanycolorsaaaagggghh);
-  padding-top: var(--typical-padding);
-  padding-bottom: var(--typical-padding);
+  background: var(--morebackground);
 }
 
 .team-header {
@@ -251,9 +244,9 @@ body {
   background: var(--primarybg);
   flex-basis: calc(100% / 4 - 30px);
   margin-left: 30px;
-  padding-bottom: 30px;
-  border-radius: 0 0 8px 8px;
-  box-shadow: 0px 2px 2px #acacac;
+  border-radius: 0 0 4px 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 .team-img {
@@ -273,28 +266,23 @@ body {
   line-height: 1.19;
   text-align: center;
   color: var(--secondarytext);
+  margin-bottom: 30px;
 }
 
 /* ----------- Footer Styles ----------- */
 
 .foot {
-}
-
-.foot-content {
   background: var(--secondarybg);
   padding-top: 60px;
   padding-bottom: 60px;
 }
 
-.foot-logo {
-  margin-bottom: 20px;
-}
-
-.logo.foot {
+.logo.white {
   color: var(--studiosecond);
 }
 
 .foot-add {
+  margin-top: 20px;
   font-style: inherit;
 }
 
@@ -303,7 +291,7 @@ body {
   color: var(--footeraddress);
 }
 
-.white {
+.contrast {
   color: var(--trietaryacc);
 }
 
@@ -318,22 +306,16 @@ body {
 
 /* ----------- Portfolio Styles ----------- */
 
-.portfolio-content {
-  padding-top: 174px;
-  padding-bottom: 94px;
-}
-
 .button-list {
-  width: 611px;
-  margin: 0 auto;
   margin-bottom: 50px;
   display: flex;
+  justify-content: center;
 }
 
 .button {
   font-family: inherit;
   border: none;
-  background: var(--whyaretheresomanycolorsaaaagggghh);
+  background: var(--morebackground);
   padding: 6px 22px;
   border-radius: 4px;
   font-weight: 500;
@@ -353,7 +335,8 @@ body {
 .button.selected {
   background: var(--accent);
   color: var(--studiosecond);
-  box-shadow: 0px 3px 3px #acacac;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .project-grid {
@@ -373,9 +356,7 @@ body {
 }
 
 .project-text {
-  margin-top: -4px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding: 20px 24px;
   border-bottom: 1px solid #eeeeee;
   border-left: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
@@ -386,8 +367,6 @@ body {
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
-  width: 332px;
-  margin: 0 auto;
   margin-bottom: 4px;
 }
 
@@ -395,6 +374,4 @@ body {
   font-size: 16px;
   line-height: 1.88;
   color: var(--secondarytext);
-  width: 332px;
-  margin: 0 auto;
 }
